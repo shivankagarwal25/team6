@@ -11,11 +11,18 @@ if(isset($_POST['submit']))
 				 { 
 				  //echo "123";
 				  $ch=$_POST['check'];
-				  $num=count($ch[0]);
-				  echo $num;
-				  print_r($ch);
-				  $nums = explode(" ",$ch[0]);
-				  echo count($nums);
+				  
+				  
+				  $c=1;
+				  $r = 0;
+				  while(isset($c))
+				  {
+					$c=$_POST["check[".$r."]"];
+					$r++;
+					echo $c;
+				  }
+				  
+				  
 				  for($i=0;$i<$num;$i++)
 				  {
 				     echo "hi"; 

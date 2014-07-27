@@ -70,7 +70,7 @@
 		</ul>
           </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Dashboard</h1>
+          <h1 class="page-header">For Recipe Manager</h1>
 
           <div class="row placeholders">
             <div class="col-xs-6 col-sm-3 placeholder">
@@ -79,17 +79,17 @@
               <span class="text-muted">Something else</span>
             </div>
             <div class="col-xs-6 col-sm-3 placeholder">
-              <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
+              <img data-src="holder.js/200x200/auto/red" class="img-responsive" alt="Generic placeholder thumbnail">
               <h4>Label</h4>
               <span class="text-muted">Something else</span>
             </div>
             <div class="col-xs-6 col-sm-3 placeholder">
-              <img data-src="holder.js/200x200/auto/sky" class="img-responsive" alt="Generic placeholder thumbnail">
+              <img data-src="holder.js/200x200/auto/yellow" class="img-responsive" alt="Generic placeholder thumbnail">
               <h4>Label</h4>
               <span class="text-muted">Something else</span>
             </div>
             <div class="col-xs-6 col-sm-3 placeholder">
-              <img data-src="holder.js/200x200/auto/vine" class="img-responsive" alt="Generic placeholder thumbnail">
+              <img data-src="holder.js/200x200/auto/red" class="img-responsive" alt="Generic placeholder thumbnail">
               <h4>Label</h4>
               <span class="text-muted">Something else</span>
             </div>
@@ -109,7 +109,7 @@
 				  </tr>
               </thead>
               <tbody>
-			  <form name="f1" method="post" action="check_meal.php">
+			  <form name="f1" method="post" action="check.php">
            	<?php
 				  $conn=mysqli_connect("localhost","root","cfg2014!","team6");
                   if (mysqli_connect_errno()) {
@@ -127,7 +127,7 @@
 				  // $row = mysqli_fetch_array($result);
 				    //echo "".$row['iname'];
 					//break;
-                    echo "<tr><td>".$row['ingredient_id']."</td><td>".$row['ingredient_name']."</td><td>".$row['ingredient_protein']."</td><td>".$row['ingredient_nutrtion']."</td><td>".$row['ingredient_cost']."</td><td><input type='checkbox' name='check[]' value=".$row['ingredient_id']."</td></tr>"; 
+                    echo "<tr><td>".$row['ingredient_id']."</td><td>".$row['ingredient_name']."</td><td>".$row['ingredient_protein']."</td><td>".$row['ingredient_nutrtion']."</td><td>".$row['ingredient_cost']."</td><td><input type='checkbox' name='check[".$ser."]' value=".$row['ingredient_id']."</td></tr>"; 
                      $ser=$ser+1;
 					//echo "<tr><td>hi</td><td>hello</td><td>hola</td><td>voila</td></tr>"; 
 					 
